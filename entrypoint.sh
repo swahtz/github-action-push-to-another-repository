@@ -117,17 +117,17 @@ ls -al /
 
 mv "$TEMP_DIR/.git" "$CLONE_DIR/.git"
 
-echo "[+] List contents of /github"
-ls -al /github
+# echo "[+] List contents of /github"
+# ls -al /github
 
-echo "[+] List contents of /github/*"
-ls -al /github/*
+# echo "[+] List contents of /github/*"
+# ls -al /github/*
 
-echo "[+] List contents of /github/workspace"
-ls -al /github/workspace
+# echo "[+] List contents of /github/workspace"
+# ls -al /github/workspace
 
-echo "[+] List contents of /github/workspace/$SOURCE_DIRECTORY"
-ls "/github/workspace/$SOURCE_DIRECTORY"
+echo "[+] List contents of $SOURCE_DIRECTORY"
+ls "$SOURCE_DIRECTORY"
 
 # echo "[+] Checking if local $SOURCE_DIRECTORY exist"
 # if [ ! -d "$SOURCE_DIRECTORY" ]
@@ -146,7 +146,7 @@ ls "/github/workspace/$SOURCE_DIRECTORY"
 
 
 echo "[+] Copying contents of source repository folder $SOURCE_DIRECTORY to folder $TARGET_DIRECTORY in git repo $DESTINATION_REPOSITORY_NAME"
-cp -rfa "/github/workspace/$SOURCE_DIRECTORY" "$CLONE_DIR/$TARGET_DIRECTORY"
+cp -rfa "$SOURCE_DIRECTORY" "$CLONE_DIR/$TARGET_DIRECTORY"
 cd "$CLONE_DIR"
 
 echo "[+] Files that will be pushed"
