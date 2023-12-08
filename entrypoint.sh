@@ -123,8 +123,8 @@ mv "$TEMP_DIR/.git" "$CLONE_DIR/.git"
 # echo "[+] List contents of /github/*"
 # ls -al /github/*
 
-# echo "[+] List contents of /github/workspace"
-# ls -al /github/workspace
+echo "[+] List contents of /github/workspace"
+ls -al /github/workspace
 
 echo "[+] List contents of $SOURCE_DIRECTORY"
 ls "$SOURCE_DIRECTORY"
