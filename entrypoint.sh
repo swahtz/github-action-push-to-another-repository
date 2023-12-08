@@ -146,7 +146,8 @@ ls -al /github/workspace
 
 
 echo "[+] Copying contents of source repository folder $SOURCE_DIRECTORY to folder $TARGET_DIRECTORY in git repo $DESTINATION_REPOSITORY_NAME"
-cp -rfa "$SOURCE_DIRECTORY" "$CLONE_DIR/$TARGET_DIRECTORY"
+#cp -rfa "$SOURCE_DIRECTORY" "$CLONE_DIR/$TARGET_DIRECTORY"
+rsync -av --include='*.whl' --exclude='*' "$SOURCE_BEFORE_DIRECTORY" "$CLONE_DIR/$TARGET_DIRECTORY"
 cd "$CLONE_DIR"
 
 echo "[+] Files that will be pushed"
