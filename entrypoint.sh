@@ -126,8 +126,8 @@ mv "$TEMP_DIR/.git" "$CLONE_DIR/.git"
 echo "[+] List contents of /github/workspace"
 ls -al /github/workspace
 
-# echo "[+] List contents of $SOURCE_DIRECTORY"
-# ls "$SOURCE_DIRECTORY"
+echo "[+] List contents of $SOURCE_DIRECTORY"
+ls "$SOURCE_DIRECTORY"
 
 # echo "[+] Checking if local $SOURCE_DIRECTORY exist"
 # if [ ! -d "$SOURCE_DIRECTORY" ]
